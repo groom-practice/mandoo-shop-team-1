@@ -60,5 +60,9 @@ submitOrder.addEventListener("click", (e) => {
     address: ${orderInfo.address}\n
     위 정보로 주문하시곘습니까?`);
 
+  if (isConfirm) {
+    alert(`${orderInfo.name}님 주문이 완료되었습니다!`);
+    location.href = "/index.html";
+  } else alert(`주문을 실패햇어요..`);
   localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
 });
