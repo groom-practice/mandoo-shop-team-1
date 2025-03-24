@@ -20,8 +20,6 @@ const order = () => {
 
   const orderContainer = document.querySelector(".order-product-container");
 
-  console.log(orderItem);
-
   orderItem.forEach((item) => {
     const div = document.createElement("div");
     div.innerHTML = `<img src="/imgs/${item.productImgFileName}" alt="${item.productName}" /><span>${item.productName}</span><p>${item.productPrice}원</p>`;
@@ -31,8 +29,36 @@ const order = () => {
 };
 order();
 
-let orderInfo = {
-  name: "",
-  phone: "",
-  address: "",
-};
+const submitOrder = document.getElementById("submitOrder");
+
+submitOrder.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const orderName = document.getElementById("orderName");
+  const orderPhoneNum = document.getElementById("orderPhoneNum");
+  const orderAddress = document.getElementById("orderAddress");
+
+  let orderInfo = {
+    name: orderName.value,
+    phone: orderPhoneNum.value,
+    address: orderAddress.value,
+  };
+  localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+
+  if (
+    orderInfo.name === "" ||
+    orderInfo.phone === "" ||
+    orderInfo.address === ""
+  ) {
+    alert("주문자 정보를 입력하지 않았습니다.");
+    return;
+  }
+
+  const isConfirm = confirm(`
+    name: ${orderInfo.name}\n
+    phone: ${orderInfo.phone}\n
+    address: ${orderInfo.address}\n
+    위 정보로 주문하시곘습니까?`);
+
+  localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+});
