@@ -43,7 +43,6 @@ submitOrder.addEventListener("click", (e) => {
     phone: orderPhoneNum.value,
     address: orderAddress.value,
   };
-  localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
 
   if (
     orderInfo.name === "" ||
