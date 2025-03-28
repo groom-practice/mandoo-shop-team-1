@@ -1,0 +1,101 @@
+body {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputBox {
+  padding: 5px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.inputBox > label {
+  width: 20%;
+  text-align: left;
+}
+
+.inputBox > input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  width: 72%;
+  justify-content: flex-start;
+}
+
+.checkboxWrapper > input {
+  margin-right: 5px;
+}
+
+.loginNav {
+  margin-top: 5px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginNav > button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginNav > a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.loginNav > a:hover,
+.loginNav > a:active {
+  color: royalblue;
+}
